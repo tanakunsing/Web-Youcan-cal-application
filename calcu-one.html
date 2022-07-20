@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+
+<head>
+  <title>Calculate-one</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="วิธีการคำนวณกฏของโอห๋ม">
+  <meta name="description" content="กฏของโอห๋ม">
+
+
+
+  <script src="angular-1.8.2/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <script src="app.js"></script>
+  <link  href= "style.css" rel= "stylesheet" type= "text/css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ 
+
+  <script>
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "10px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+      } else {
+        document.getElementById("navbar").style.padding = "30px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+  </script>
+  <div id="navbar" >
+    <a href="home.html" id="logo" >CALCU-COMPANY </a>
+    <div id="navbar-right">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+
+</head>
+
+
+<body ng-app="app" ng-controller="ex-Controller">
+  <div class="container-fluid">
+    <div class="row" id="row_on">
+      <div class="col-sm-12 " id="nnav">
+        <a href="home.html">หน้าแรก</a>>
+        <a href="calcu-one.html" >โปรแกรมคำนวณกฎของโอห์ม</a>>
+        <a href="calcu-two.html">โปรแกรมคำนวณตัวต้านทาน</a>>
+        <a href="calcu-three.html">โปรแกรมคำนวณตัวเก็บประจุไฟฟ้า</a>
+      </div>
+      <div class="col-sm-12" id="proall">
+        <h2 class="h2all">โปรแกรมคำนวณกฎของโอห์ม</h2>
+        <p style="color: white;width: 800px;font-size: 17px;">ระบุว่า กระแสที่ไหลผ่านวงจรจะแปรผันตามสัดส่วนของแรงดันไฟฟ้าที่ใช้ระหว่างทั้งสองจุด
+          เครื่องคำนวณตามกฎของโอห์มมือนี้ใช้สำหรับการคำนวณกำลัง กระแสไฟฟ้า แรงดันไฟฟ้า หรือความต้านทาน</p>
+        
+      </div>
+    </div>
+    </div>
+    
+      <div class="container">
+          <div class="row" style="margin-top: 50px;">
+            
+            <div class="col-sm-12">
+              <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#/!" >แผนภูมิสูตรคำนวณ</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#!tomato" >เกี่ยวกับ</a>
+                    </li>
+                  </ul>
+                </div>
+            <div ng-view></div>
+              </div>
+              <div class="alert alert-primary" role="alert" style="margin-top: 20px;font-size: 15px;">
+               ! ให้รีเซ็ตเครื่องคำนวณหลังจากใช้งานทุกครั้งเพื่อแก้ปัญหาสำหรับการหาค่าการรวมของตัวแปรต่าง ๆ
+              </div>
+              <div style="display: flex;">
+              <div class="col-sm-6" id="inom">
+                  <p>แรงดันไฟฟ้า</p>
+                  <input type="text" ng-model="v" />
+                  <p>กระแสไฟฟ้า</p>
+                  <input type="text" ng-model="I" />
+                  <p>ตัวต้านทาน</p>
+                  <input type="text" ng-model="R" />
+                  <div ng-if="p != ''">
+                  <p>กำลังไฟฟ้า</p>
+                  <input type="text" ng-model="p" />
+                  </div>
+                  <div style="display: flex; margin-top: 20px;margin-left: 25px;">
+                    <button ng-click="dele()" type="button" class="btn btn-link">ตั้งค่าใหม่</button>
+                    <button  ng-click="fuc()" type="button" class="btn btn-primary">คำนวณ</button>
+                  </div>
+              </div>
+              <div class="col-sm-6"><img src="./image/ima34.png">
+            </div>
+          </div>
+          </div>
+      </div>
+
+  </div>
+  <hr style="margin-top: 30px;">
+  <div class="container-fluid"
+  style=" height: 270px;padding-top: 10px;">
+  <div class="row">
+    <div class="col-sm-3" style="margin-left: 100px;">
+      <h3>About me</h3>
+      
+      <p>I'am Programmer I love coding  ,Nice to meet you  </p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Do you like ? Share this !</h3>
+      <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+      <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+      <i class="fa fa-youtube-square" style="font-size:36px"></i>
+      <p>© Thank you  | 62503160008-7@mail.rmutk.ac.th </p>
+    </div>
+    <div class="col-sm-3">
+      <h3 >Subscribe to newsletter</h3>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">massage</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>  
+    </head>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("Controller", function ($scope) {
+            $scope.test = 0;
+            $scope.show = "test";
+            $scope.io = function(){
+                    if($scope.test <= 50){
+                        $scope.show = "f";
+                    }else if($scope.test <= 80){
+                        $scope.show = "B";
+                    }else {
+                        $scope.show = "A";
+                    }
+            }
+        });
+    </script>
+    <body>
+    <div ng-app = "app">
+        <div ng-controller="Controller">
+            <input type="text" ng-model ="test" />
+            <input type="Submit" value="click" ng-click="io()"/>
+            {{show}}
+        </div>
+    </div>
+    </body>
+   
+</html>

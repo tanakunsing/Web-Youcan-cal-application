@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="angular-1.8.2/angular.js"></script>
+  <script src="angular-1.8.2/angular-route.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link  href= "style.css" rel= "stylesheet" type= "text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "10px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+      } else {
+        document.getElementById("navbar").style.padding = "30px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+  </script>
+
+  <div id="navbar">
+    <a href="home.html" id="logo">YOUCAN-CAL</a>
+    <div id="navbar-right">
+      <a class="active" href="home.html">Home</a>
+      <a href="">Contact</a>
+      <a href="about">About</a>
+    </div>
+  </div>
+
+</head>
+
+<body style="height: 1500px;">
+  <div style="margin-top: 20px;">
+    <div><img src="./image/ima6.jpeg" style=" max-width: 100%;height: auto;opacity: 0.3;"></div>
+    <div class="centered">Can I help you</div>
+    <div class="cente" style="margin-top: 25px;">Program basic about calculate</div>
+    <div>
+      <div class="dropdown cente1">
+        <button class="btn btn-primary dropdown-toggle " type="button" id="dropdownMenu2" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="width: 350px;margin-top:25px">
+          Let'Go to Program
+        </button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2" style="width: 320px;">
+          <a class="dropdown-item" href="calcu-one.html">โปรแกรมคำนวณกฎของโอห์ม</a>
+          <a class="dropdown-item" href="calcu-two.html">โปรแกรมคำนวณตัวต้านทาน</a>
+          <a class="dropdown-item" href="calcu-three.html">โปรแกรมคำนวณตัวเก็บประจุไฟฟ้า</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5"
+        style="text-align: center;margin-left: 350px;margin-top: 45px;font-family: Arial, Helvetica, sans-serif;">
+        <h2 style="font-size: 50px;">welcome my website</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" style="text-align: center;margin-top: 50px;">
+        <p style="font-size: 35px;font-family: 'Courier New', Courier, monospace;">what I do</p>
+        <hr>
+      </div>
+
+    </div>
+
+   
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="./image/ima8.jpg" style="height: 100;width: 150px;">
+      </div>
+      <div class="col-sm-3" style="margin-left: 200px;">
+        <img src="./image/ima9.png" style="height: 100;width: 150px;">
+      </div>
+      <div class="col-sm-3" style="margin-left: 80px;">
+        <img src="./image/ima10.png" style="height: 100;width: 150px;">
+      </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-sm-3">
+        <a href="calcu-two.html " id="txtt" class="link-primary">โปรแกรมคำนวณตัวต้านทาน</a>
+      </div>
+      <div class="col-sm-3"  style="margin-left: 170px;">
+        <a  href="calcu-one.html"  id="txtt" class="link-danger">โปรแกรมคำนวณกฎของโอห์ม</a>
+      </div>
+      <div class="col-sm-3" style="margin-left: 78px;">
+        <a href="calcu-three.html" id="txtt" class="link-primary">โปรแกรมคำนวณตัวเก็บประจุไฟฟ้า</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12" style="text-align: center;margin-top: 100px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          </p>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 bht" style="text-align: center;font-size:  45px;margin-top: 30px;">Profilte</div>
+      <div class="col-sm-6 "><img src="./image/me.png" style="width: 550px;margin-top: 60px;"></div>
+      <div class="col-sm-6 " style="margin-top: 60px;">
+        <h1>TANAKUN SINGKHEN</h1>
+        <h2>Student and  Developer</h2>
+        <p style="padding-top: 20px;">I'm Student of Univercity of Bangkok. this is a job for class web Programming. Thank you for Subscribe and
+          watch my website</p>
+      </div>
+    </div>
+  </div>
+
+  <hr style="margin-top: 30px;">
+  <div class="container-fluid" style=" height: 270px;padding-top: 10px;">
+    <div class="row">
+      <div class="col-sm-3" style="margin-left: 100px;" id="about">
+        <h3>About me</h3>
+        <p>I'am Programmer I love coding ,Nice to meet you </p>
+      </div>
+      <div class="col-sm-4" id = "foot" >
+        <h3>Do you like ? Share this !</h3>
+        <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+        <i class="fa fa-linkedin-square" style="font-size:36px"></i>
+        <i class="fa fa-youtube-square" style="font-size:36px"></i>
+        <p>© Thank you | 62503160008-7@mail.rmutk.ac.th </p>
+      </div>
+      <div class="col-sm-3">
+        <h3>Subscribe to newsletter</h3>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">massage</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
